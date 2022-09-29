@@ -16,6 +16,11 @@ export default {
       split: false
     })
   },
+  vitePlugin: {
+    experimental: {
+      useVitePreprocess: true
+    }
+  },
   preprocess: [
 	preprocess({
 		postcss: true
