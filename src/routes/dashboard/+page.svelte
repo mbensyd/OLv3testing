@@ -60,8 +60,6 @@
 
 </style>
 
-<p>{actor.name}</p>
-
 <div class="flex flex-row">
     {#each modules as mod}
     <div class="{clicked === `${mod.Title}` ? '' : 'closed'} basis-0 grow h-screen bg-cover hover:grow-[1.5] {show === `${mod.Title}` ? 'active' : ''}  {current === `${mod.Title}` ? 'selected' : ''}" 
