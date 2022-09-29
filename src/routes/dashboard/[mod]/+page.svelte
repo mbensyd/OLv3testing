@@ -1,0 +1,47 @@
+<script>
+    import { modules } from "$lib/data/module.json";
+    import { page } from '$app/stores';
+
+    let pageID = $page.params.mod;
+    let pageMod = modules;
+
+    // needs refactoring so it is fully dynamic
+    if (pageID === '$Selecting your Fish') {
+        console.log("mod0");
+        pageMod = modules[0];
+    } else if (pageID === '$Selecting Optimal Genes') {
+        console.log("mod1");
+        pageMod = modules[1];
+    } else {
+        pageMod = modules[2];
+    };
+
+    console.log(pageMod);
+    console.log(pageID);
+    console.log(pageMod.image);
+    {pageMod.toDoList};
+</script>
+
+<style>
+    	.checked {
+        text-decoration: line-through;
+    }
+</style>
+
+<div class="h-screen bg-cover" style="background-image: url(../{pageMod.image})">
+    <div>
+        <h1>{pageMod.Title}</h1>
+        <p>{pageMod.Description}</p>
+        <div>
+            <ol>
+                {#each pageMod.toDoList as item}
+                <li>
+                    <input bind:checked={item.status} type="checkbox">
+                    <span class:checked={item.status}>{item.text}</span>
+                    <a href="/">Start</a>
+                </li>
+                {/each}
+            </ol>
+        </div>
+    </div>
+</div>
