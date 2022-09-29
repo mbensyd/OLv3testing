@@ -1,9 +1,8 @@
-export async function load (page) {
-    var urlParams = new URLSearchParams(window.location.search);
-    var actor = JSON.parse(urlParams.get('actor'));
-    
+export async function load ({params, url}) {
+    let actor = url.searchParams.get('actor');
+
     return {
-        name: actor.name
-    }
+        actor
+    };
    
 };
