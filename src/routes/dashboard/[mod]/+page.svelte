@@ -1,7 +1,10 @@
 <script>
     import { modules } from "$lib/data/module.json";
     import { page } from '$app/stores';
-    
+
+    let pageID = $page.params.mod;
+    let pageMod = modules;
+
     // needs refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish') {
         console.log("mod0");
