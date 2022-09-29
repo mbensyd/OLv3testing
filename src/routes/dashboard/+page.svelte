@@ -5,7 +5,8 @@
     import { scale } from 'svelte/transition';
     import { cubicIn, cubicOut } from 'svelte/easing';
     import { fly } from 'svelte/transition'
-
+    import { page } from '$app/stores';
+    var actor = $page.data.actorDets;
 
     let current = false;
     import { modules } from "$lib/data/module.json";
@@ -60,6 +61,7 @@
 
 </style>
 
+<p>{actor.name}</p>
 
 <div class="flex flex-row">
     {#each modules as mod}
