@@ -15,11 +15,11 @@
 </style>
 
 
-<div class="bg-cover bg-center w-full h-screen" style="background-image: url('{bgspace}')">
+<div class="bg-cover bg-center w-full h-screen" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), background-image: url('{bgspace}')">
     <nav class="pt-4">
         <div class="mx-12 my-10 flex flex-wrap justify-between items-center">
         <a href="#" class="flex items-center">
-            <img src="https://yt3.ggpht.com/ytc/AMLnZu--oGCILnGwgaq2Opv1xz6_n-R1Yy2gA24-VTlLzA=s900-c-k-c0x00ffffff-no-rj" class="mr-3 h-12 " alt="WSU Logo">
+            <img src="/lib/images/bgspace.png" class="mr-3 h-12 " alt="WSU Logo">
             <span class="self-center text-2xl font-normal whitespace-nowrap text-white">PGx</span>
         </a>
         </div>
