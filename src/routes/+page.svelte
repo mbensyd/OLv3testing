@@ -15,7 +15,7 @@
 </style>
 
 
-<div class="bg-cover bg-center w-full h-screen" style="background-image: url($lib/images/bgspace.png)">
+<div class="bg-cover bg-center w-full h-screen" style="background-image: url('{bgspace}')">
     <nav class="pt-4">
         <div class="mx-12 my-10 flex flex-wrap justify-between items-center">
         <a href="#" class="flex items-center">
