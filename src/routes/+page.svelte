@@ -15,7 +15,7 @@
 </style>
 
 
-<div class="bg-cover bg-center w-full h-screen" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)), background-image: url('{bgspace}')">
+<div class="bg-cover bg-center w-full h-screen" style="background-image: url('{bgspace}')">
     <nav class="pt-4">
         <div class="mx-12 my-10 flex flex-wrap justify-between items-center">
         <a href="#" class="flex items-center">

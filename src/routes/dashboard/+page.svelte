@@ -6,6 +6,11 @@
     import { cubicIn, cubicOut } from 'svelte/easing';
     import { fly } from 'svelte/transition'
 
+    //images - need to be refactored so are dynamic. No idea how to link in sveltekit. 
+
+    import mod1 from '$lib/images/mod1.png'
+    import mod2 from '$lib/images/mod1.png'
+    import mod3 from '$lib/images/mod1.png'
 
     let current = false;
     import { modules } from "$lib/data/module.json";
