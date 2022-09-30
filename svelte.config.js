@@ -1,4 +1,4 @@
-import preprocess from 'svelte-preprocess';
+//import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-netlify';
 
 
@@ -21,10 +21,10 @@ export default {
       useVitePreprocess: true
     }
   },
-  preprocess: [
-	preprocess({
-		postcss: true
-	})
-]
+  //preprocess: [
+	//preprocess({
+//		postcss: true
+//	})
+//]
 };
 
