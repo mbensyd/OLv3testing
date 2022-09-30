@@ -28,7 +28,7 @@
     }
 </style>
 
-<div class="h-screen bg-cover" style="background-image: url(../{pageMod.image})">
+<div class="bg-gradient-to-r from-indigo-500 h-screen bg-cover" style="background-image: linear-gradient(1deg,              rgb(0 0 0 / 0%),              rgb(0 0 0 / 42%)), url({pageMod.image})">
     <div>
         <h1>{pageMod.Title}</h1>
         <p>{pageMod.Description}</p>
