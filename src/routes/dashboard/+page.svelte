@@ -8,9 +8,9 @@
 
     //images - need to be refactored so are dynamic. No idea how to link in sveltekit. 
 
-    import mod1 from '$lib/images/mod1.png'
-    import mod2 from '$lib/images/mod1.png'
-    import mod3 from '$lib/images/mod1.png'
+    import mod1 from '$lib/images/mod1.png';
+    import mod2 from '$lib/images/mod1.png';
+    import mod3 from '$lib/images/mod1.png';
 
     let current = false;
     import { modules } from "$lib/data/module.json";
@@ -68,7 +68,7 @@
 <div class="flex flex-row">
     {#each modules as mod}
     <div class="{clicked === `${mod.Title}` ? '' : 'closed'} basis-0 grow h-screen bg-cover hover:grow-[1.5] {show === `${mod.Title}` ? 'active' : ''}  {current === `${mod.Title}` ? 'selected' : ''}" 
-    on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: url({mod.image})">
+    on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: url('{mod.image}')">
 
             <h1>{mod.Title}</h1>
             <p>{mod.Description}</p>
