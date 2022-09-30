@@ -28,17 +28,19 @@
     }
 </style>
 
-<div class="bg-gradient-to-r from-indigo-500 h-screen bg-cover" style="background-image: linear-gradient(1deg,              rgb(0 0 0 / 0%),              rgb(0 0 0 / 42%)), url({pageMod.image})">
-    <div>
-        <h1>{pageMod.Title}</h1>
-        <p>{pageMod.Description}</p>
+<div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full " style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%),              rgb(0 0 0 / 42%)), url({pageMod.image})">
+    <div class="flex flex-col justify-center items-center">
+        <div>
+            <h1 class="text-3xl font-extrabold pt-4 text-white">{pageMod.Title}</h1>
+            <p class="pt-4 text-white">{pageMod.Description}</p>
+        </div>
         <div>
             <ol>
                 {#each pageMod.toDoList as item}
                 <li>
                     <input bind:checked={item.status} type="checkbox">
                     <span class:checked={item.status}>{item.text}</span>
-                    <a href="/">Start</a>
+                    <a href="/dashboard/${pageMod.Title}/${item.text}">Start</a>
                 </li>
                 {/each}
             </ol>
