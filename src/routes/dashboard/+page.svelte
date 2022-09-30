@@ -66,7 +66,7 @@
 <div class="flex flex-row">
     {#each modules as mod}
     <div class="{clicked === `${mod.Title}` ? '' : 'closed'} basis-0 grow h-screen bg-cover hover:grow-[1.5] {show === `${mod.Title}` ? 'active' : ''}  {current === `${mod.Title}` ? 'selected' : ''}" 
-    on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: url('${mod.image}')">
+    on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: url('{mod.image}')">
 
             <h1>{mod.Title}</h1>
             <p>{mod.Description}</p>
