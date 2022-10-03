@@ -4,13 +4,14 @@
     import { page } from '$app/stores';
    // export let data;
     var actor = $page.data.actorDets;
+    var registration = $page.data.reg;
     import bgspace from '$lib/images/bgspace.png';
     //const str = 'https://media.openlearning.com/4Jh4yBPJcDuCXNxsYrro9Uvgt5jKdyjaV6YjRM4anuHJUKVRNErrTVo4coG5GXvF.1663640714/css-filter-cards/dist/index.html?activity_id=https%3A%2F%2Fwww.openlearning.com%2Fcourses%2Fanother-experiment%2Fhomepage%2F%3Fblock%3D63285c74a2c28f2c7b735c39%26embedded%3Dtrue&actor=%7B%22objectType%22%3A%22Agent%22%2C%22name%22%3A%22Matthew%22%2C%22mbox%22%3A%22mailto%3A5a49ac24117bd0379934a3c0%40users.openlearning.com%22%7D&auth=Basic%20NWE0OWFjMjQxMTdiZDAzNzk5MzRhM2MwIDYzMjg1YzFhZjUyMjVhM2UyZWIwNjQzOCA2MzI4NWM3NGEyYzI4ZjJjN2I3MzVjMzkgMTY2Mzk3MjE4MTowUUJ4clUzSi9yTnE1L2xJVUJOZUwzZXNoMm5wejVLQWs3b0s0S1U5YklrPQ%3D%3D&endpoint=https%3A%2F%2Fwww.openlearning.com%2Fxapi%2F&registration=fd168900-3813-11ed-a438-00f5225a3e2e';
     //var urlParams = new URLSearchParams(window.location.search);
     //var actor = JSON.parse(urlParams.get('actor'));
     //console.log(actor);
     console.log(actor);
-    //console.log(data);
+    console.log(registration);
 </script>
 
 <style>

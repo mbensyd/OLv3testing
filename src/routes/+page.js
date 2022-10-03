@@ -3,12 +3,12 @@ export async function load ({params, url}) {
     let reg = url.searchParams.get('registration');
 
     let actorDets = JSON.parse(actor);
-    //console.log(reg);
     
 
     //let name = actorDets.name;
     return {
-        actorDets
+        actorDets,
+        reg
     };
    
 };
