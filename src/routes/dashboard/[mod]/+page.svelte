@@ -1,6 +1,17 @@
 <script>
     import { modules } from "$lib/data/module.json";
     import { page } from '$app/stores';
+    import { dets } from '../../store.js';
+
+    //build rise link to save progress from user details
+
+    const authURL = encodeURIComponent($dets.auth);
+    const endpointURL = encodeURIComponent($dets.endpoint);
+    const nameURL = encodeURIComponent($dets.userName);
+    const mboxURL = encodeURIComponent($dets.userMbox);
+    const regURL = encodeURIComponent($dets.reg);
+
+    console.log(mboxURL);
 
     let pageID = $page.params.mod;
     let pageMod = modules;
@@ -41,7 +52,7 @@
                 <li>
                     <input bind:checked={item.status} type="checkbox">
                     <span class:checked={item.status}>{item.text}</span>
-                    <a href="/dashboard/${pageMod.Title}/${item.text}">Start</a>
+                    <a href="/dashboard/${pageMod.Title}/${item.text}${$dets.newUrl}">Start</a>
                 </li>
                 {/each}
             </ol>

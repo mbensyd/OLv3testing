@@ -1,3 +1,5 @@
+// why is this here? If a learner opens up this page directly, the previous session data isn't cached (not yet). So we need to get it again, from the URL. Oh dear.
+
 import { dets } from '../store.js';
 
 export async function load ({params, url}) {
