@@ -39,10 +39,7 @@
 <div class="bg-cover bg-center w-full h-screen">
     <nav class="pt-4">
         <div class="mx-12 my-10 flex flex-wrap justify-between items-center">
-        <a href="#" class="flex items-center">
-            <img src="/lib/images/bgspace.png" class="mr-3 h-12 " alt="WSU Logo">
-            <span class="self-center text-2xl font-normal whitespace-nowrap text-white">PGx</span>
-        </a>
+
         </div>
     </nav>
     <div class="mt-32 flex justify-center items-center">
