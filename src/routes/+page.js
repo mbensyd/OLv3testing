@@ -1,4 +1,4 @@
-import { dets } from '..lib/Stores/store.js';
+import { dets } from './store.js';
 
 
 export async function load ({params, url}) {
