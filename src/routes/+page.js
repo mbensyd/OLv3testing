@@ -5,6 +5,7 @@ export async function load ({params, url}) {
     let reg = url.searchParams.get('registration');
     let endpoint = url.searchParams.get('endpoint');
     let auth = url.searchParams.get('auth');
+    let newUrl = url.search;
 
     let actorDets = JSON.parse(actor);
     let userName = actorDets.name;
@@ -16,6 +17,7 @@ export async function load ({params, url}) {
         reg,
         auth,
         endpoint,
+        newUrl
     }); 
    
 };
