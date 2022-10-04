@@ -14,13 +14,13 @@
     <div class=" w-full md:flex md:w-auto md:order-9" id="navbar-sticky">
       <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-10 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:bg-transparent md:p-0 " aria-current="page">Home</a>
+          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:hover:font-bold md:bg-transparent md:p-0 " aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
+          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:hover:font-bold md:bg-transparent md:p-0 " aria-current="page">Profile</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-sky-500 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:hover:font-bold md:bg-transparent md:p-0 " aria-current="page">About</a>
         </li>
       </ul>
     </div>
