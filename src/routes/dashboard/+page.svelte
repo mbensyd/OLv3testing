@@ -1,6 +1,6 @@
 <script>
     import { dets } from '../store.js';
-   // import { page } from '$app/stores';
+    import { page } from '$app/stores';
 
     //get xapi ?search from url mega hack don't do
     const newUrl = $page.url.search;
