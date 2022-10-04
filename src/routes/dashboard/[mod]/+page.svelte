@@ -1,25 +1,39 @@
 <script>
     import { modules } from "$lib/data/module.json";
     import { page } from '$app/stores';
+    import { dets } from '../../store.js';
+    import { actLink } from './storeLink.js';
+
+
+    //build rise link to save progress from user details
+
+    const authURL = encodeURIComponent($dets.auth);
+    const endpointURL = encodeURIComponent($dets.endpoint);
+    const nameURL = encodeURIComponent($dets.userName);
+    const mboxURL = encodeURIComponent($dets.userMbox);
+    const regURL = encodeURIComponent($dets.reg);
+
+    //console.log(mboxURL);
 
     let pageID = $page.params.mod;
     let pageMod = modules;
+    //console.log(pageID);
 
     // needs refactoring so it is fully dynamic
-    if (pageID === '$Selecting your Fish') {
+    if (pageID === '$Selecting your Fish$') {
         console.log("mod0");
         pageMod = modules[0];
-    } else if (pageID === '$Selecting Optimal Genes') {
+    } else if (pageID === '$Selecting Optimal Genes$') {
         console.log("mod1");
         pageMod = modules[1];
     } else {
         pageMod = modules[2];
     };
 
-    console.log(pageMod);
-    console.log(pageID);
-    console.log(pageMod.image);
-    {pageMod.toDoList};
+    //console.log(pageMod);
+    //console.log(pageID);
+    //console.log(pageMod.image);
+
 </script>
 
 <style>
@@ -40,7 +54,7 @@
                 <li>
                     <input bind:checked={item.status} type="checkbox">
                     <span class:checked={item.status}>{item.text}</span>
-                    <a href="/dashboard/${pageMod.Title}/${item.text}">Start</a>
+                    <a href="/dashboard/${pageMod.Title}/${item.text}${$dets.newUrl}" on:click="{() => actLink.set(`${item.link}`)}" on:click="{console.log($actLink)}">Start</a>
                 </li>
                 {/each}
             </ol>

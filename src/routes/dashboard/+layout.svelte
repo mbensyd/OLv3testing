@@ -1,4 +1,8 @@
 
+<script>
+    import { dets } from '../store.js';
+</script>
+
 <nav class="bg-white bg-opacity-20 px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="https://flowbite.com/" class="flex items-center">
@@ -14,7 +18,11 @@
     <div class=" w-full md:flex md:w-auto md:order-9" id="navbar-sticky">
       <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-10 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
+<<<<<<< HEAD
           <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:hover:font-bold md:bg-transparent md:p-0 " aria-current="page">Home</a>
+=======
+          <a href={`/dashboard${$dets.newUrl}`} class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:bg-transparent md:p-0 " aria-current="page">Home</a>
+>>>>>>> 45c559193a606fe5e51b5cc3b3efa62979a20b18
         </li>
         <li>
           <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:hover:font-bold md:bg-transparent md:p-0 " aria-current="page">Profile</a>
