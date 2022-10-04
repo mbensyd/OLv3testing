@@ -48,13 +48,8 @@
 
         </div>
     </nav>
-<<<<<<< HEAD
-    
-    <div class="mt-32 flex justify-center items-center">
-        
-=======
+
     <div class="mt-32 flex justify-center items-center" >
->>>>>>> 2f6891d30b79a4dbf3046b104df0b0a0bb80fe1a
         <div class="p-16 max-w-2xl bg-white bg-opacity-70 rounded-3xl shadow-2xl dark:bg-gray-800 dark:border-gray-700">
                 <h5 class="mb-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Hey, <span class="font-normal">NAME FAIL 🥲</span></h5>
             <p class="mb-8 font-normal text-xl text-gray-800 dark:text-gray-700"><span class="font-bold">Your mission </span>is to conduct a life cycle assessment of the entire environmental management system (EMS) of your company with the aim of reaching net zero carbon emission reduction goals.</p>
