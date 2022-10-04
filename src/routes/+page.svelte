@@ -2,7 +2,7 @@
     
 	import Layout from "./+layout.svelte";
     import { page } from '$app/stores';
-    import { dets } from '..lib/Stores/store.js';
+    import { dets } from '../lib/Stores/store.js';
 
     console.log($dets);
 
