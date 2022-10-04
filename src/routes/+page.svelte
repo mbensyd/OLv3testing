@@ -2,11 +2,19 @@
     
 	import Layout from "./+layout.svelte";
     import { page } from '$app/stores';
+    import { dets } from './store.js';
+    
+    dets.set($page.url.search);
+    console.log($dets);
+    let auth = $dets.searchParams.get('auth');
+    console.log(auth);
+
+
    // export let data;
-    var actor = $page.data.actorDets;
-    var registration = $page.data.reg;
-    var endpoint = $page.data.endpoint;
-    var auth = $page.data.auth;
+    //var actor = $page.data.actorDets;
+    //var registration = $page.data.reg;
+    //var endpoint = $page.data.endpoint;
+   // var auth = $page.data.auth;
 
     // not working WHY?? sad. onMount also not working - 500 error
     //let url = '';
@@ -19,14 +27,11 @@
     //var actor = JSON.parse(urlParams.get('actor'));
     //console.log(actor);
 
-    const authURL = encodeURIComponent(auth);
-    const endpointURL = encodeURIComponent(endpoint);
-    const nameURL = encodeURIComponent(actor.name);
-    const mboxURL = encodeURIComponent(actor.mbox);
-    const regURL = encodeURIComponent(registration);
-
-    console.log(authURL);
-
+    //const authURL = encodeURIComponent(auth);
+    //const endpointURL = encodeURIComponent(endpoint);
+    //const nameURL = encodeURIComponent(actor.name);
+   // const mboxURL = encodeURIComponent(actor.mbox);
+   // const regURL = encodeURIComponent(registration);
 
 </script>
 
@@ -40,17 +45,18 @@
 <div class="bg-cover bg-center w-full h-screen" style="background-image: url('{bgspace}')">
     <nav class="pt-4">
         <div class="mx-12 my-10 flex flex-wrap justify-between items-center">
-        <a href="#" class="flex items-center">
-            <img src="/lib/images/bgspace.png" class="mr-3 h-12 " alt="WSU Logo">
-            <span class="self-center text-2xl font-normal whitespace-nowrap text-white">PGx</span>
-        </a>
+
         </div>
     </nav>
+<<<<<<< HEAD
     
     <div class="mt-32 flex justify-center items-center">
         
+=======
+    <div class="mt-32 flex justify-center items-center" >
+>>>>>>> 2f6891d30b79a4dbf3046b104df0b0a0bb80fe1a
         <div class="p-16 max-w-2xl bg-white bg-opacity-70 rounded-3xl shadow-2xl dark:bg-gray-800 dark:border-gray-700">
-                <h5 class="mb-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Hey, <span class="font-normal">{actor.name}</span></h5>
+                <h5 class="mb-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Hey, <span class="font-normal">NAME FAIL 🥲</span></h5>
             <p class="mb-8 font-normal text-xl text-gray-800 dark:text-gray-700"><span class="font-bold">Your mission </span>is to conduct a life cycle assessment of the entire environmental management system (EMS) of your company with the aim of reaching net zero carbon emission reduction goals.</p>
             <a data-sveltekit-prefetch href="/dashboard" class="mt-2 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" >
                 LAUNCH LEARN SPACE
