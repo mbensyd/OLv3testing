@@ -6,10 +6,8 @@
     import { onMount } from 'svelte';
 
     let url = ``;
-
     onMount(() => url = window.location.href);
-    dets.set(url);
-    console.log($url);
+    console.log(url);
 
    // export let data;
     //var actor = $page.data.actorDets;
