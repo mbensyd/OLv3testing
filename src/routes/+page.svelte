@@ -3,8 +3,13 @@
 	import Layout from "./+layout.svelte";
     //import { page } from '$app/stores';
     import { dets } from './store.js';
+    import { onMount } from 'svelte';
 
-    console.log($dets);
+    let url = ``;
+
+    onMount(() => url = window.location.href);
+    dets.set(url);
+    console.log($url);
 
    // export let data;
     //var actor = $page.data.actorDets;
