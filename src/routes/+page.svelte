@@ -4,10 +4,9 @@
     import { page } from '$app/stores';
     import { dets } from './store.js';
     
-    dets.set($page.url.search);
+    //dets.set($page.url.search);
     console.log($dets);
-    let auth = $dets.searchParams.get('auth');
-    console.log(auth);
+
 
 
    // export let data;
