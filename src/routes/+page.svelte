@@ -4,11 +4,11 @@
     import { page } from '$app/stores';
     import { dets } from './store.js';
     
-    let url = ``;
     dets.set($page.url.search);
     console.log($dets);
-    var userDets = JSON.parse($dets.actor);
-    console.log(userDets.name);
+    let auth = $dets.searchParams.get('auth');
+    console.log(auth);
+
 
    // export let data;
     //var actor = $page.data.actorDets;
