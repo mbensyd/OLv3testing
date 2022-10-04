@@ -1,10 +1,23 @@
-import mod1 from '$lib/images/mod1.png';
-import mod2 from '$lib/images/mod2.png';
-import { modules } from "$lib/data/module.json";
+import { dets } from '../store.js';
 
+export async function load ({params, url}) {
+    let actor = url.searchParams.get('actor');
+    let reg = url.searchParams.get('registration');
+    let endpoint = url.searchParams.get('endpoint');
+    let auth = url.searchParams.get('auth');
+    let newUrl = url.search;
 
-export async function load (page) {
-    if (modules[0].image) {
-        return mod1
-    } 
+    let actorDets = JSON.parse(actor);
+    let userName = actorDets.name;
+    let userMbox = actorDets.mbox;
+
+    dets.set({
+        userName,
+        userMbox,
+        reg,
+        auth,
+        endpoint,
+        newUrl
+    }); 
+   
 };

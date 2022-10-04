@@ -1,25 +1,24 @@
 <script>
+    import Layout from '../+layout.svelte';
     import { dets } from '../store.js';
-    //import { page } from '$app/stores';
+    import { page } from '$app/stores';
+    import { modules } from "$lib/data/module.json";
 
     //get xapi ?search from url mega hack don't do
-    //const newUrl = $page.url.search;
-    //console.log(newUrl);
+    const newUrl = $page.url.search;
+    console.log(newUrl);
 
     //testing data store from first screen
-    console.log(dets);
-
+    console.log($dets);
 
     //images - need to be refactored so are dynamic. No idea how to link in sveltekit. 
     import mod1 from '$lib/images/mod1.png';
     import mod2 from '$lib/images/mod2.png';
 
+    //setting up dynamic css
     let current = false;
-    import { modules } from "$lib/data/module.json";
-    import Layout from '../+layout.svelte';
     let show = false;
     let isShow = false;
-
     let clicked = false;
 
     async function press() {
@@ -30,6 +29,7 @@
             }
     };
 
+    // this was cool - keeping for the memories 🥲
     async function modPage() {
             isShow = !isShow
     };
@@ -69,7 +69,7 @@
         <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
             <h1 class="text-3xl font-extrabold pt-4 text-white">{mod.Title}</h1>
             <p class="pt-4 text-white">{mod.Description}</p>
-            <a class="mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" href="/dashboard/${mod.Title}" data-sveltekit-prefetch type="button" 
+            <a class="mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" href="/dashboard/${mod.Title}${newUrl}" data-sveltekit-prefetch type="button" 
             on:click="{() => show = `${mod.Title}`}" on:click="{() => clicked = `${mod.Title}`}" on:click="{press}"  on:click="{modPage}">
             Get Started </a>
 

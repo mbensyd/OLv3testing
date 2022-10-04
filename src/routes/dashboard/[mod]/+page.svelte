@@ -4,12 +4,13 @@
 
     let pageID = $page.params.mod;
     let pageMod = modules;
+    console.log(pageID);
 
     // needs refactoring so it is fully dynamic
-    if (pageID === '$Selecting your Fish') {
+    if (pageID === '$Selecting your Fish$') {
         console.log("mod0");
         pageMod = modules[0];
-    } else if (pageID === '$Selecting Optimal Genes') {
+    } else if (pageID === '$Selecting Optimal Genes$') {
         console.log("mod1");
         pageMod = modules[1];
     } else {
