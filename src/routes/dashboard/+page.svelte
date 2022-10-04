@@ -1,8 +1,6 @@
 <script>
     //testing data store from first page
     import { dets } from '../store.js';
-    console.log($dets);
-
 
     //images - need to be refactored so are dynamic. No idea how to link in sveltekit. 
     import mod1 from '$lib/images/mod1.png';
