@@ -22,7 +22,7 @@
     let clicked = false;
 
     async function press() {
-            console.log('happy');
+            //console.log('happy');
             const collection = document.getElementsByClassName("closed");
                 for (let i = 0; i < collection.length; i++) {
                 collection[i].classList.add("hidden");
