@@ -7,8 +7,12 @@ export async function load ({params, url}) {
     let auth = url.searchParams.get('auth');
 
     let actorDets = JSON.parse(actor);
+    let userName = actorDets.name;
+    let userMbox = actorDets.mbox;
 
     dets.set({
+        userName,
+        userMbox,
         reg,
         auth,
         endpoint
