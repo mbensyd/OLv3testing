@@ -3,7 +3,7 @@
 	import Layout from "./+layout.svelte";
     import { page } from '$app/stores';
     import { dets } from './store.js';
-    const newURL = new URL($page.url.search);
+    const newURL = new URL($page.search);
     console.log(newURL);
 
 
