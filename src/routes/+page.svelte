@@ -35,6 +35,8 @@
 </style>
 
 
+
+  
 <div class="bg-cover bg-center w-full h-screen" style="background-image: url('{bgspace}')">
     <nav class="pt-4">
         <div class="mx-12 my-10 flex flex-wrap justify-between items-center">
@@ -44,7 +46,9 @@
         </a>
         </div>
     </nav>
+    
     <div class="mt-32 flex justify-center items-center">
+        
         <div class="p-16 max-w-2xl bg-white bg-opacity-70 rounded-3xl shadow-2xl dark:bg-gray-800 dark:border-gray-700">
                 <h5 class="mb-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Hey, <span class="font-normal">{actor.name}</span></h5>
             <p class="mb-8 font-normal text-xl text-gray-800 dark:text-gray-700"><span class="font-bold">Your mission </span>is to conduct a life cycle assessment of the entire environmental management system (EMS) of your company with the aim of reaching net zero carbon emission reduction goals.</p>
