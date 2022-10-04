@@ -8,7 +8,7 @@
     dets.set($page.url.search);
     console.log($dets);
     var userDets = JSON.parse($dets.actor);
-    console.log(userDets.name)
+    console.log(userDets.name);
 
    // export let data;
     //var actor = $page.data.actorDets;
