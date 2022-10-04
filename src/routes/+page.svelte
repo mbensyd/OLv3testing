@@ -18,11 +18,15 @@
     //var urlParams = new URLSearchParams(window.location.search);
     //var actor = JSON.parse(urlParams.get('actor'));
     //console.log(actor);
-    console.log(actor.name);
-    console.log(actor.mbox);
-    console.log(registration);
-    console.log(endpoint);
-    console.log(auth);
+
+    const authURL = encodeURIComponent(auth);
+    const endpointURL = encodeURIComponent(endpoint);
+    const nameURL = encodeURIComponent(actor.name);
+    const mboxURL = encodeURIComponent(actor.mbox);
+    const regURL = encodeURIComponent(registration);
+
+    console.log(authURL);
+
 
 </script>
 
