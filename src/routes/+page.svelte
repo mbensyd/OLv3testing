@@ -5,8 +5,8 @@
     import { dets } from './store.js';
     
     let url = ``;
-    dets.set($page.url.href);
-    console.log($dets)
+    dets.set($page.url.search);
+    console.log($dets);
 
    // export let data;
     //var actor = $page.data.actorDets;
