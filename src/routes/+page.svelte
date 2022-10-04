@@ -1,7 +1,7 @@
 <script>
     
 	import Layout from "./+layout.svelte";
-    import { page } from '$app/stores';
+    //import { page } from '$app/stores';
     import { dets } from './store.js';
 
     console.log($dets);
