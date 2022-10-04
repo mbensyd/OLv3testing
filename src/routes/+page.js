@@ -15,7 +15,7 @@ export async function load ({params, url}) {
         userMbox,
         reg,
         auth,
-        endpoint
+        endpoint,
     }); 
    
 };
