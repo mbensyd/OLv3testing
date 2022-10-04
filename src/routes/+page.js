@@ -16,7 +16,6 @@ export async function load ({params, url}) {
         reg,
         auth,
         endpoint,
-        newUrl,
     }); 
    
 };
