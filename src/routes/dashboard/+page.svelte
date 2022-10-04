@@ -69,7 +69,7 @@
         <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
             <h1 class="text-3xl font-extrabold pt-4 text-white">{mod.Title}</h1>
             <p class="pt-4 text-white">{mod.Description}</p>
-            <a class="mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" href="/dashboard/${mod.Title}" data-sveltekit-prefetch type="button" 
+            <a class="mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" href={`/dashboard/${newUrl}`} data-sveltekit-prefetch type="button" 
             on:click="{() => show = `${mod.Title}`}" on:click="{() => clicked = `${mod.Title}`}" on:click="{press}"  on:click="{modPage}">
             Get Started </a>
 
