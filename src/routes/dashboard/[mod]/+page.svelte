@@ -17,7 +17,7 @@
 
     let pageID = $page.params.mod;
     let pageMod = modules;
-    //console.log(pageID);
+    console.log(pageMod.toDoList);
 
     // needs refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish$') {
