@@ -48,7 +48,7 @@
 
 
   
-<div class="bg-cover bg-center w-full h-screen" style="background-image: url('{bgspace}')">
+<div class="bg-cover bg-center w-full h-screen" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 60%)), url('{bgspace}')"> 
     <nav class="pt-4">
         <div class="mx-12 my-10 flex flex-wrap justify-between items-center">
 
