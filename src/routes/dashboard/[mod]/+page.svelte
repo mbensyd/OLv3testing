@@ -39,8 +39,9 @@
     }
 </style>
 
-<div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full " style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%),              rgb(0 0 0 / 42%)), url({pageMod.image})">
+<div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%),              rgb(0 0 0 / 42%)), url({pageMod.image})">
     <div class="flex flex-col justify-center items-center">
+        <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
         <div>
             <h1 class="text-3xl font-extrabold pt-4 text-white">{pageMod.Title}</h1>
             <p class="pt-4 text-white">{pageMod.Description}</p>
@@ -55,6 +56,7 @@
                 </li>
                 {/each}
             </ol>
+        </div>
         </div>
     </div>
 </div>

@@ -30,8 +30,12 @@
 
 </script>
 
-<h1>h1</h1>
-
 <iframe src="{urlRise}" height="700px" width="100%" allow="accelerometer; gyroscope; vr; xr-spatial-tracking;" frameborder="0">
 
 </iframe>
+
+<style>
+iframe {
+    margin-top:72px;
+}
+</style>
