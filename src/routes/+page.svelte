@@ -10,7 +10,9 @@
     import bgspace from '$lib/images/bgspace.png';
     //importing det store with url details - different way to get url data. Don't know which one is better. 
     import { dets } from './store.js';
+    import { modData } from './store.js';
     console.log($dets);
+    console.log($modData);
 
     //getting url for button to start to add xAPI data to next link. Very dodgy. 
     var newUrl = $dets.newUrl;
@@ -60,7 +62,7 @@
                 <h5 class="mb-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Hey, <span class="font-normal">{$dets.userName}</span></h5>
             <p class="mb-8 font-normal text-xl text-gray-800 dark:text-gray-700"><span class="font-bold">Your mission </span>is to conduct a life cycle assessment of the entire environmental management system (EMS) of your company with the aim of reaching net zero carbon emission reduction goals.</p>
             <a data-sveltekit-prefetch href={`/dashboard${$dets.newUrl}`} class="mt-2 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" >
-                LAUNCH LEARNSPACE
+                LAUNCH LEARNSPACE 
             </a>
         </div>
     </div>
