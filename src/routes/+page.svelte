@@ -10,9 +10,8 @@
     import bgspace from '$lib/images/bgspace.png';
     //importing det store with url details - different way to get url data. Don't know which one is better. 
     import { dets } from './store.js';
-    import { modData } from './store.js';
     console.log($dets);
-    console.log($modData);
+
 
     //getting url for button to start to add xAPI data to next link. Very dodgy. 
     var newUrl = $dets.newUrl;
