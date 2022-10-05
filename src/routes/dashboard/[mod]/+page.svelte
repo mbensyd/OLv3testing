@@ -1,32 +1,25 @@
 <script>
     import { modules } from "$lib/data/module.json";
     import { page } from '$app/stores';
-    import { dets } from '../../store.js';
+    import { dets } from './storeLink.js';
     import { actLink } from './storeLink.js';
+    //import { urlRise } from './fixURL.svelte';
     import { modData } from './storeLink.js';
-    console.log($dets.reg);
+    console.log(modules[0]);
 
-    //build rise link to save progress from user details
-
-    const authURL = encodeURIComponent($dets.auth);
-    const endpointURL = encodeURIComponent($dets.endpoint);
-    const nameURL = encodeURIComponent($dets.userName);
-    const mboxURL = encodeURIComponent($dets.userMbox);
-    const regURL = encodeURIComponent($dets.reg);
-
-    console.log($modData.modules[0].toDoList[2].link);
+    console.log($modData.modules[0]);
     //console.log(mboxURL);
 
     let pageID = $page.params.mod;
-    let pageMod = modules;
-    console.log(pageMod.toDoList);
-    let pageIDuser = $page.url.searchParams.get('endpoint');
-    console.log(pageIDuser);
+    let pageMod = '';
+    //console.log(pageMod.toDoList);
+    //let pageIDuser = $page.url.searchParams.get('endpoint');
+    //console.log(pageIDuser);
 
     // needs refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish$') {
         console.log("mod0");
-        pageMod = modules[0];
+        pageMod = $modData.modules[0];
     } else if (pageID === '$Selecting Optimal Genes$') {
         console.log("mod1");
         pageMod = modules[1];

@@ -3,6 +3,8 @@
     import { dets } from '../store.js';
     import { page } from '$app/stores';
     import { modules } from "$lib/data/module.json";
+    import { modData } from './[mod]/storeLink.js'
+    console.log(modData);
 
 
     //get xapi ?search from url mega hack don't do
