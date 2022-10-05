@@ -4,8 +4,8 @@
 
 <nav class="bg-white bg-opacity-20 px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-    <a href="https://flowbite.com/" class="flex items-center">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+    <a href="#" class="flex items-center">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white">PGx</span>
     </a>
     <div class="flex md:order-8">       
@@ -37,7 +37,7 @@
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
             <a data-sveltekit-prefetch href="/dashboard" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" >
-                Discover more fish
+                Discover more pods
             </a> 
         </li>
     </ul>
