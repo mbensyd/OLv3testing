@@ -3,7 +3,8 @@
     import { page } from '$app/stores';
     import { dets } from '../../store.js';
     import { actLink } from './storeLink.js';
-
+    //import { modData } from './storeLink.js';
+    console.log($actLink);
 
     //build rise link to save progress from user details
 

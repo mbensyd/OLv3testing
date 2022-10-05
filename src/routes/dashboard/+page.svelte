@@ -30,7 +30,7 @@
             }
     };
 
-    // this was cool - keeping for the memories 🥲
+
     async function modPage() {
             isShow = !isShow
     };
