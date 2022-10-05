@@ -3,6 +3,8 @@
     import { dets } from '../store.js';
     import { page } from '$app/stores';
     import { modules } from "$lib/data/module.json";
+    import { modData } from '../store.js';
+
 
     //get xapi ?search from url mega hack don't do
     //const newUrl = $page.url.search;
@@ -10,6 +12,7 @@
 
     //testing data store from first screen
     console.log($dets);
+    console.log($modData);
 
     //images - need to be refactored so are dynamic. No idea how to link in sveltekit. 
     import mod1 from '$lib/images/mod1.png';
