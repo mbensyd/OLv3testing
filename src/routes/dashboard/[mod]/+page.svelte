@@ -3,8 +3,8 @@
     import { page } from '$app/stores';
     import { dets } from '../../store.js';
     import { actLink } from './storeLink.js';
-    //import { modData } from './storeLink.js';
-    console.log($actLink);
+    import { modData } from './storeLink.js';
+    console.log($dets.reg);
 
     //build rise link to save progress from user details
 
@@ -14,11 +14,14 @@
     const mboxURL = encodeURIComponent($dets.userMbox);
     const regURL = encodeURIComponent($dets.reg);
 
+    console.log($modData.modules[0].toDoList[2].link);
     //console.log(mboxURL);
 
     let pageID = $page.params.mod;
     let pageMod = modules;
     console.log(pageMod.toDoList);
+    let pageIDuser = $page.url.searchParams.get('endpoint');
+    console.log(pageIDuser);
 
     // needs refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish$') {
