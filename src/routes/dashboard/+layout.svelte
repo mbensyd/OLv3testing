@@ -1,6 +1,5 @@
 <script>
     import { dets } from '../store.js';
-    
 </script>
 
 
