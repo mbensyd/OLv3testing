@@ -1,6 +1,9 @@
 <script>
     import { dets } from '../store.js';
+    
 </script>
+
+
 
 <nav class="bg-white bg-opacity-20 px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0">
     <div class="container flex flex-wrap justify-between items-center mx-auto">

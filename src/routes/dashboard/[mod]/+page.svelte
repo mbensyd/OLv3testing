@@ -4,10 +4,11 @@
     import { dets } from './storeLink.js';
     import { actLink } from './storeLink.js';
     //import { urlRise } from './fixURL.svelte';
-    import { modData } from './storeLink.js';
-    console.log(modules[0]);
+    //import { modData } from './storeLink.js';
+    console.log(modules);
+    console.log(dets);
 
-    console.log($modData.modules[0]);
+    //console.log($modData.modules[0]);
     //console.log(mboxURL);
 
     let pageID = $page.params.mod;
@@ -19,7 +20,7 @@
     // needs refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish$') {
         console.log("mod0");
-        pageMod = $modData.modules[0];
+        pageMod = modules[0];
     } else if (pageID === '$Selecting Optimal Genes$') {
         console.log("mod1");
         pageMod = modules[1];
@@ -27,9 +28,14 @@
         pageMod = modules[2];
     };
 
-    //console.log(pageMod);
-    //console.log(pageID);
-    //console.log(pageMod.image);
+    //add xAPI to activities
+    
+    let xapiTag = $page.url.search;
+    console.log(xapiTag);
+    let indexUrl = xapiTag.indexOf("embedded");
+    console.log(indexUrl);
+    let addUrl = xapiTag.substring(indexUrl);
+    console.log(addUrl);
 
 </script>
 
@@ -52,7 +58,7 @@
                 <li>
                     <input bind:checked={item.status} type="checkbox">
                     <span class:checked={item.status}>{item.text}</span>
-                    <a href="/dashboard/${pageMod.Title}/${item.text}${$dets.newUrl}" on:click="{() => actLink.set(`${item.link}`)}" on:click="{console.log($actLink)}">Start</a>
+                    <a data-sveltekit-prefetch href="/dashboard/${pageMod.Title}/${item.text}${$dets.newUrl}" on:click="{() => actLink.set(`${item.link}+${addUrl}`)}" on:click="{console.log($actLink)}">Start</a>
                 </li>
                 {/each}
             </ol>
