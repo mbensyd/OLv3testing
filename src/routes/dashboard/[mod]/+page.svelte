@@ -3,21 +3,13 @@
     import { page } from '$app/stores';
     import { dets } from './storeLink.js';
     import { actLink } from './storeLink.js';
-    //import { urlRise } from './fixURL.svelte';
-    //import { modData } from './storeLink.js';
     console.log(modules);
     console.log(dets);
 
-    //console.log($modData.modules[0]);
-    //console.log(mboxURL);
-
     let pageID = $page.params.mod;
     let pageMod = '';
-    //console.log(pageMod.toDoList);
-    //let pageIDuser = $page.url.searchParams.get('endpoint');
-    //console.log(pageIDuser);
 
-    // needs refactoring so it is fully dynamic
+    // TODO - refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish$') {
         console.log("mod0");
         pageMod = modules[0];
@@ -28,14 +20,13 @@
         pageMod = modules[2];
     };
 
-    //add xAPI to activities
-    
+    //add xAPI to activities TODO: do this on next route using url data - prevents refresh/clear cache bug and losing this. 
     let xapiTag = $page.url.search;
-    console.log(xapiTag);
+    //console.log(xapiTag);
     let indexUrl = xapiTag.indexOf("embedded");
-    console.log(indexUrl);
+    //console.log(indexUrl);
     let addUrl = xapiTag.substring(indexUrl);
-    console.log(addUrl);
+    //console.log(addUrl);
 
 </script>
 

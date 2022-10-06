@@ -1,6 +1,4 @@
 import { dets } from './store.js';
-import { modData } from './store.js';
-
 
 export async function load ({params, url}) {
     let actor = url.searchParams.get('actor');
