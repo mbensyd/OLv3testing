@@ -9,6 +9,9 @@
     let pageID = $page.params.mod;
     let pageMod = '';
 
+    //cat
+    let name = $dets.userName;
+
     // TODO - refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish$') {
         console.log("mod0");
@@ -36,7 +39,7 @@
     }
 </style>
 
-<div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 42%)), url({pageMod.image})">
+<div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 42%)), url({pageMod.image}{name}!)">
     <div class="flex flex-col justify-center items-center">
         <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
         <div>
