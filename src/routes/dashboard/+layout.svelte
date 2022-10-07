@@ -4,7 +4,8 @@
 
 
 
-<nav class="bg-white bg-opacity-20 px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0">
+<nav class="py-0 fixed w-full z-20 top-0 left-0 backdrop-blur-sm">
+  <div class="bg-white bg-opacity-20 w-full">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href={`/dashboard${$dets.newUrl}`} class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
@@ -18,22 +19,49 @@
     </div>
     <div class=" w-full md:flex md:w-auto md:order-9" id="navbar-sticky">
       <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-10 md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
+        <li class="mt-2.5">
           <a href={`/dashboard${$dets.newUrl}`} class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:bg-transparent md:p-0 " aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:hover:font-bold md:bg-transparent md:p-0 " aria-current="page">Profile</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pr-4 pl-3 text-white rounded  md:hover:text-sky-500  md:hover:font-bold md:bg-transparent md:p-0 " aria-current="page">About</a>
+          <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
+            <span class="font-medium text-gray-600 dark:text-gray-300">MB</span>
+          </div>
         </li>
       </ul>
     </div>
     </div>
+  </div>
+    <!-- Breadcrumb -->
+    <div class="px-5 py-3 ml-12 mt-2 -space-x-4 text-white-700" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li class="inline-flex items-center">
+          <a href="#" class="inline-flex items-center text-sm font-medium text-gray-300">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+            Mission
+          </a>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            <a href="#" class="ml-1 text-sm font-medium text-gray-300">Dashboard</a>
+          </div>
+        </li>
+        <li aria-current="page">
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+            <span class="ml-1 text-sm font-medium text-gray-300">Tasks</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <!-- Breadcrumb -->
   </nav>
+
   
 <slot />
 
+
+   <!-- footer -->
 <footer class="fixed bottom-0 left-0 z-20 p-4 w-full bg-white border-t bg-opacity-100 border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="#" class="hover:underline">PGx™</a>
     </span>
