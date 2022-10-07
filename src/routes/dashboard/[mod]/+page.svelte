@@ -1,16 +1,13 @@
 <script>
     import { modules } from "$lib/data/module.json";
     import { page } from '$app/stores';
-    import { dets } from './storeLink.js';
-    import { actLink } from './storeLink.js';
+    import { dets } from '../../store.js';
+    import { actLink } from '../../store.js';
     console.log(modules);
     console.log(dets);
 
     let pageID = $page.params.mod;
     let pageMod = '';
-
-    //cat
-    let name = $dets.userName;
 
     // TODO - refactoring so it is fully dynamic
     if (pageID === '$Selecting your Fish$') {
@@ -33,11 +30,7 @@
 
 </script>
 
-<style>
-    	.checked {
-        text-decoration: line-through;
-    }
-</style>
+
 
 <div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 42%)), url({pageMod.image}!)">
     <div class="flex flex-col justify-center items-center">
@@ -64,3 +57,22 @@
     </div>
 </div>
 
+<style>
+    .checked {
+    text-decoration: line-through;
+}
+a {
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  background-color: #0EA5E9;
+  color: white;
+  transition: transform 150ms ease-out;
+}
+a:hover {
+  transform: scale(1.1);
+}
+a:active {
+  transform: scale(0.9);
+}
+</style>

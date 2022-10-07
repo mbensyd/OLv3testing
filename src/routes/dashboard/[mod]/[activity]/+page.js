@@ -1,5 +1,6 @@
-// why is this here? If a learner opens up this page directly, the previous session data isn't cached (not yet). So we need to get it again, from the URL. Oh dear.
-import { dets } from '../../store.js';
+import { dets } from '../../../store.js';
+import { actLink } from '../../../store.js';
+import { modules } from "$lib/data/module.json";
 
 export async function load ({params, url}) {
     let actor = url.searchParams.get('actor');

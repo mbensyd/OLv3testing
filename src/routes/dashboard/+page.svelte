@@ -5,9 +5,10 @@
     import { modules } from "$lib/data/module.json";
 
     //testing data store from first screen
-    console.log($dets);
+    //console.log($dets);
+
+    //cat
     let name = $dets.userName;
-    console.log(name);
 
     //images - need to be refactored so are dynamic. No idea how to link in sveltekit. 
    // import mod1 from '$lib/images/mod1.png';
@@ -34,6 +35,24 @@
     };
 </script>
 
+
+
+<div class="flex flex-row">
+    {#each modules as mod}
+    <div class="{clicked === `${mod.Title}` ? '' : 'closed'} basis-0 grow h-screen bg-cover hover:grow-[1.5] {show === `${mod.Title}` ? 'active' : ''}  {current === `${mod.Title}` ? 'selected' : ''}" 
+    on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('{mod.image}{name}')">
+        <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-semibold pt-12 text-white">{mod.Title}</h1>
+            <p class="pt-8 text-white">{mod.Description}</p>
+            <a href="/dashboard/${mod.Title}${$dets.newUrl}" class="mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" 
+            on:click="{() => show = `${mod.Title}`}" on:click="{() => clicked = `${mod.Title}`}" on:click="{press}"  on:click="{modPage}">
+            LET'S GO </a>
+
+        </div>
+    </div>
+    {/each}
+</div>
+
 <style>
 
     p, a {
@@ -58,21 +77,18 @@
     .hidden {
         display: none;
     }
-
+    a {
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+        background-color: #0EA5E9;
+        color: white;
+        transition: transform 150ms ease-out;
+    }
+    a:hover {
+        transform: scale(1.1);
+    }
+    a:active {
+        transform: scale(0.9);
+    }
 </style>
-
-<div class="flex flex-row">
-    {#each modules as mod}
-    <div class="{clicked === `${mod.Title}` ? '' : 'closed'} basis-0 grow h-screen bg-cover hover:grow-[1.5] {show === `${mod.Title}` ? 'active' : ''}  {current === `${mod.Title}` ? 'selected' : ''}" 
-    on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('{mod.image}{name}')">
-        <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
-            <h1 class="text-3xl font-semibold pt-12 text-white">{mod.Title}</h1>
-            <p class="pt-8 text-white">{mod.Description}</p>
-            <a href="/dashboard/${mod.Title}${$dets.newUrl}" class="mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" 
-            on:click="{() => show = `${mod.Title}`}" on:click="{() => clicked = `${mod.Title}`}" on:click="{press}"  on:click="{modPage}">
-            LET'S GO </a>
-
-        </div>
-    </div>
-    {/each}
-</div>
