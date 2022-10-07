@@ -36,20 +36,23 @@
     }
 </style>
 
-<div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%),              rgb(0 0 0 / 42%)), url({pageMod.image})">
+<div class=" bg-gradient-to-r from-indigo-500 h-screen bg-cover w-full" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 42%)), url({pageMod.image})">
     <div class="flex flex-col justify-center items-center">
         <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
         <div>
-            <h1 class="text-3xl font-extrabold pt-4 text-white">{pageMod.Title}</h1>
+            <h1 class="text-3xl font-semibold pt-12 text-white">{pageMod.Title}</h1>
             <p class="pt-4 text-white">{pageMod.Description}</p>
         </div>
-        <div>
-            <ol>
+
+
+
+        <div class="p-4 mt-12 w-full max-w-2xl bg-white bg-opacity-60 rounded-lg shadow-md sm:p-6 dark:bg-gray-800 dark:border-gray-700">
+            <ol class="my-2 space-y-3">
                 {#each pageMod.toDoList as item}
-                <li>
-                    <input bind:checked={item.status} type="checkbox">
-                    <span class:checked={item.status}>{item.text}</span>
-                    <a data-sveltekit-prefetch href="/dashboard/${pageMod.Title}/${item.text}${$dets.newUrl}" on:click="{() => actLink.set(`${item.link}+${addUrl}`)}" on:click="{console.log($actLink)}">Start</a>
+                <li class="flex items-center p-3 bg-opacity-70 text-base font-bold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
+                    <input bind:checked={item.status} type="checkbox" class="mx-3 w-4 h-4">
+                    <span class:checked={item.status} class="flex-1 ml-3 whitespace-nowrap">{item.text}</span>
+                    <a data-sveltekit-prefetch href="/dashboard/${pageMod.Title}/${item.text}${$dets.newUrl}" on:click="{() => actLink.set(`${item.link}+${addUrl}`)}" on:click="{console.log($actLink)}" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60">START</a>
                 </li>
                 {/each}
             </ol>
@@ -57,3 +60,4 @@
         </div>
     </div>
 </div>
+
