@@ -33,8 +33,22 @@
     
 </div>
   
-
-
+<style>
+        a {
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+        background-color: #0EA5E9;
+        color: white;
+        transition: transform 150ms ease-out;
+    }
+    a:hover {
+        transform: scale(1.1);
+    }
+    a:active {
+        transform: scale(0.9);
+    }
+</style>
 
 
 

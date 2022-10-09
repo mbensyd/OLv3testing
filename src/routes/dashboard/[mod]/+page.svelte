@@ -11,10 +11,10 @@
     let pageMod = '';
 
     // TODO - refactoring so it is fully dynamic
-    if (pageID === '$Selecting your Fish$') {
+    if (pageID === 'Selecting your Fish') {
         console.log("mod0");
         pageMod = modules[0];
-    } else if (pageID === '$Selecting Optimal Genes$') {
+    } else if (pageID === 'Selecting Optimal Genes') {
         console.log("mod1");
         pageMod = modules[1];
     } else {
@@ -49,7 +49,7 @@
                 <li class="flex items-center p-3 bg-opacity-70 text-base font-bold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                     <input bind:checked={item.status} type="checkbox" class="mx-3 w-4 h-4">
                     <span class:checked={item.status} class="flex-1 ml-3 whitespace-nowrap">{item.text}</span>
-                    <a data-sveltekit-prefetch href="/dashboard/${pageMod.Title}/${item.text}${$dets.newUrl}" on:click="{() => actLink.set(`${item.link}+${addUrl}`)}" on:click="{console.log($actLink)}" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60">START</a>
+                    <a data-sveltekit-prefetch href="/dashboard/${pageMod.Title}/{item.text}{$dets.newUrl}" on:click="{() => actLink.set(`${item.link}+${addUrl}`)}" on:click="{console.log($actLink)}" class="test mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60">START</a>
                 </li>
                 {/each}
             </ol>

@@ -7,14 +7,15 @@
 
     //TOD - get activity link via store to prevent errors on refreshing screen (if a user saves this link and reopens (after clearing cache) iframe src will not be in store)
     let activityID = $page.params.activity;
+    let pageID = $page.params.mod;
+    let modIndex = modules.indexOf(activityID);
+    console.log(modIndex);
     console.log(activityID);
-    
 
     //TODO - get search from URL to feed into dets store - fixes refresh/clear cache bug    
     //FIXED in +page.js
 
     //background image
-    let pageID = $page.params.mod;
     let pageMod = '';
 
     // TODO - refactoring so it is fully dynamic

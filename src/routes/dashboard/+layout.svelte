@@ -11,7 +11,7 @@
   <div class="bg-white bg-opacity-20 w-full">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href={`/dashboard${$dets.newUrl}`} class="flex items-center">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="animate-spin mr-3 h-6 sm:h-9" alt="Logo">
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white">PGx</span>
     </a>
     <div class="flex md:order-8">       
@@ -70,29 +70,14 @@
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
-            <button data-sveltekit-prefetch href="/dashboard" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" >
+            <a data-sveltekit-prefetch href="/dashboard" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" >
                 DISCOVER MORE
-            </button> 
+            </a> 
         </li>
     </ul>
 </footer>
 
-<style>
-  button {
-    -webkit-appearance: none;
-    background: none;
-    border: none;
-    background-color: #0EA5E9;
-    color: white;
-    transition: transform 150ms ease-out;
-  }
-  button:hover {
-    transform: scale(1.1);
-  }
-  button:active {
-    transform: scale(0.9);
-  }
-</style>
+
 
 
 
