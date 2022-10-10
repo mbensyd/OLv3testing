@@ -33,7 +33,7 @@
 
 </script>
 
-<div>
+<div class="bg-cover bg-center w-full h-screen" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')">
 <!-- svelte-ignore a11y-missing-attribute -->
 <iframe src="{finalActLink}" height="1000px" width="100%" allow="accelerometer; gyroscope; vr; xr-spatial-tracking;" frameborder="0">
 </iframe>
@@ -41,7 +41,7 @@
 
 <style>
 iframe {
-    margin-top: 72px;
+    margin-top: 0px;
     height: 100vh - 72px;
 }
 </style>
