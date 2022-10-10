@@ -1,6 +1,6 @@
 <script>
-import { BreadCrumbs } from '../../routes/store.js';
-import { dets } from '../../routes/store.js';
+import { BreadCrumbs } from '../store.js';
+import { dets } from '../store.js';
 </script>
 
       <nav class="flex" aria-label="Breadcrumb">

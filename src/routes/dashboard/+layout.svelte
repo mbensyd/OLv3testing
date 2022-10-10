@@ -1,8 +1,7 @@
 <script>
     import { dets } from '../store.js';
     let name = $dets.userName;
-    import Breadcrumbs from '../../lib/data/Breadcrumbs.svelte';
-
+    import Breadcrumbs from './Breadcrumbs.svelte';
 
 </script>
 
