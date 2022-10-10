@@ -9,8 +9,7 @@
     let activityID = $page.params.activity;
     let pageID = $page.params.mod;
     let modIndex = modules.indexOf(activityID);
-    console.log(modIndex);
-    console.log(activityID);
+
 
     //TODO - get search from URL to feed into dets store - fixes refresh/clear cache bug    
     //FIXED in +page.js
@@ -19,10 +18,10 @@
     let pageMod = '';
 
     // TODO - refactoring so it is fully dynamic
-    if (pageID === '$Selecting your Fish$') {
+    if (pageID === 'Module 1: Path to Net Zero') {
         console.log("mod0");
         pageMod = modules[0];
-    } else if (pageID === '$Selecting Optimal Genes$') {
+    } else if (pageID === 'Module 2: Environmental Management Systems') {
         console.log("mod1");
         pageMod = modules[1];
     } else {
@@ -30,6 +29,13 @@
     };
 
     let finalActLink = $actLink;
+
+    import { BreadCrumbs } from '../../../store.js';
+    $BreadCrumbs = {
+    Home: `/dashboard${dets.newUrl}`,
+    [$page.params.mod]: `/dashboard/${$page.params.mod}${dets.newUrl}`,
+    [$page.params.activity]: null
+    };
 
 </script>
 

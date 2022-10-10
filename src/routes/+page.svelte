@@ -34,7 +34,7 @@
 </div>
   
 <style>
-        a {
+    a {
         -webkit-appearance: none;
         background: none;
         border: none;

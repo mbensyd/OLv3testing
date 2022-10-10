@@ -5,8 +5,11 @@
     import { modules } from "$lib/data/module.json";
     console.log($dets.newUrl);
 
-    //testing data store from first screen
-    //console.log($dets);
+    //breadcrumb
+    import { BreadCrumbs } from '../store.js';
+    $BreadCrumbs = {
+    Home: `/dashboard${dets.newUrl}`
+    };
 
     //cat
     let name = $dets.userName;
@@ -57,18 +60,41 @@
 <style>
 
     .card:hover {
-        transition: flex-basis 500ms ease-in-out;
+        transition-timing-function: ease-in-out;
+
+        transition: 0.3s;
+    
+        /* Move into place */
+        transform: translateX(0); 
+
+        /*    this might work !!    transition: all 400ms cubic-bezier(0.175, 0.685, 0.2, 1.275);*/
+
     }
 
     p, a {
-        display: none;
+        display: inline;
+        opacity: 0;
+        transition-delay: 0.33s;
     }
-    .selected p {
+
+    .card:hover p {
+        display:inline;
+        opacity: 1;
+    }
+
+    .card:hover a {
+        display: inline;
+        opacity: 1;
+    }
+
+    /*.selected p {
            display: inline;
+           
         }
     
     .selected a {
         display: inline;
+        
     }
 
     .active {
@@ -82,6 +108,8 @@
     .hidden {
         display: none;
     }
+
+    */
     a {
         -webkit-appearance: none;
         background: none;

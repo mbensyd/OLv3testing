@@ -5,3 +5,5 @@ export const dets =  writable ('');
 export const modData = writable('');
 
 export const actLink = writable('');
+
+export const BreadCrumbs = writable({});

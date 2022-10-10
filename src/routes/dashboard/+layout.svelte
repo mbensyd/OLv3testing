@@ -1,10 +1,10 @@
 <script>
     import { dets } from '../store.js';
     let name = $dets.userName;
+    import Breadcrumbs from '../../lib/data/Breadcrumbs.svelte';
 
-    //let firstNameChar = 
+
 </script>
-
 
 
 <nav class="py-0 fixed w-full z-20 top-0 left-0 backdrop-blur-sm">
@@ -34,9 +34,9 @@
     </div>
     </div>
   </div>
+  <Breadcrumbs />
   </nav>
 
-  
 <slot />
 
 
@@ -54,7 +54,22 @@
 </footer>
 
 
-
+<style>
+    a {
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+        background-color: #0EA5E9;
+        color: white;
+        transition: transform 150ms ease-out;
+    }
+    a:hover {
+        transform: scale(1.1);
+    }
+    a:active {
+        transform: scale(0.9);
+    }
+</style>
 
 
   

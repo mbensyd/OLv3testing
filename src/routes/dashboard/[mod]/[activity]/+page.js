@@ -1,6 +1,5 @@
 import { dets } from '../../../store.js';
-import { actLink } from '../../../store.js';
-import { modules } from "$lib/data/module.json";
+
 
 export async function load ({params, url}) {
     let actor = url.searchParams.get('actor');
