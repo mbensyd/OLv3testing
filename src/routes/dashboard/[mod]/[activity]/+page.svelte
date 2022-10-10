@@ -34,7 +34,7 @@
     $BreadCrumbs = {
     Home: `/dashboard${$dets.newUrl}`,
     [$page.params.mod]: `/dashboard/${$page.params.mod}${$dets.newUrl}`,
-    [$page.params.activity]: null
+    [$page.params.activity]: `#`
     };
 
 </script>

@@ -8,7 +8,7 @@
     import { BreadCrumbs } from '../../store.js';
     $BreadCrumbs = {
     Home: `/dashboard${$dets.newUrl}`,
-    [$page.params.mod]: null
+    [$page.params.mod]: `#`
     };
 
     console.log($dets.newUrl);
