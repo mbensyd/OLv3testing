@@ -8,11 +8,11 @@
     //breadcrumb
     import { BreadCrumbs } from '../store.js';
     $BreadCrumbs = {
-    Home: `#`
+    Dashboard: `#`
     };
 
     //cat
-    let name = $dets.userName;s
+    let name = $dets.userName;
 
     //images - need to be refactored so are dynamic. No idea how to link in sveltekit. 
    // import mod1 from '$lib/images/mod1.png';

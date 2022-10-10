@@ -13,7 +13,9 @@
     <a href={`/dashboard${$dets.newUrl}`} class="flex items-center">
         <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-6 sm:h-9" alt="Logo">
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white">PGx</span>
+        
     </a>
+    <Breadcrumbs />
     <div class="flex md:order-8">       
         <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-10 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
@@ -34,7 +36,6 @@
     </div>
     </div>
   </div>
-  <Breadcrumbs />
   </nav>
 
 <slot />
