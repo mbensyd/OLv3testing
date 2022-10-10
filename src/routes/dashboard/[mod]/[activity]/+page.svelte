@@ -33,11 +33,12 @@
 
 </script>
 
-<div class="bg-cover bg-center w-full h-screen" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')">
+<div class="h-screen max-h-[72px] w-full" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80')">
 <!-- svelte-ignore a11y-missing-attribute -->
+<p></p>
+</div>
 <iframe src="{finalActLink}" height="1000px" width="100%" allow="accelerometer; gyroscope; vr; xr-spatial-tracking;" frameborder="0">
 </iframe>
-</div>
 
 <style>
 iframe {
