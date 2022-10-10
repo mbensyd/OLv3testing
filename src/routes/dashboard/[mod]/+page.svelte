@@ -3,8 +3,14 @@
     import { page } from '$app/stores';
     import { dets } from '../../store.js';
     import { actLink } from '../../store.js';
-    //console.log(modules);
-    //console.log(dets);
+
+    //breadcrumb
+    import { BreadCrumbs } from '../../store.js';
+    $BreadCrumbs = {
+    Home: `/dashboard${dets.newUrl}`,
+    [$page.params.mod]: null
+    };
+
     console.log($dets.newUrl);
 
     let pageID = $page.params.mod;
