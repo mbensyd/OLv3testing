@@ -39,52 +39,42 @@
     };
 </script>
 
-
-
 <div class="flex flex-row">
     {#each modules as mod}
     <div class="{clicked === `${mod.Title}` ? '' : 'closed'} card basis-0 grow h-screen bg-cover hover:grow-[1.5] {show === `${mod.Title}` ? 'active' : ''}  {current === `${mod.Title}` ? 'selected' : ''}" 
     on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('{mod.image}{name}')">
         <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
             <h1 class="text-3xl font-semibold pt-12 text-white">{mod.Title}</h1>
-            <p class="pt-8 text-white">{mod.Description}</p>
-            <a data-sveltekit-prefetch href="/dashboard/{mod.Title}{$dets.newUrl}" class="test mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-bold hover:border border-sky-500 hover:bg-white hover:bg-opacity-60" 
-            on:click="{() => show = `${mod.Title}`}" on:click="{() => clicked = `${mod.Title}`}" on:click="{press}"  on:click="{modPage}">
-            LET'S GO </a>
-
+            <section class="card-text">
+                <p class="content pt-8 text-white">{mod.Description}</p>
+                <a data-sveltekit-prefetch href="/dashboard/{mod.Title}{$dets.newUrl}" class=" test mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-teal-500 border hover:text-teal-500 hover:font-bold hover:border border-teal-500 hover:bg-white hover:bg-opacity-60" 
+                on:click="{() => show = `${mod.Title}`}" on:click="{() => clicked = `${mod.Title}`}" on:click="{press}"  on:click="{modPage}">
+                LET'S GO </a>
+            </section>
         </div>
     </div>
     {/each}
 </div>
 
 <style>
-
+    /*card hover animation*/
     .card:hover {
-        transition-timing-function: ease-in-out;
-
-        transition: 0.3s;
-    
-        /* Move into place */
-        transform: translateX(0); 
-
-        /*    this might work !!    transition: all 400ms cubic-bezier(0.175, 0.685, 0.2, 1.275);*/
-
+        transition: all 400ms cubic-bezier(0.175, 0.685, 0.2, 1.275);
     }
 
-    p, a {
+    /*button appearing*/
+    .card section {
         display: inline;
         opacity: 0;
-        transition-delay: 0.33s;
+        transition-property: opacity;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 450ms;
     }
 
-    .card:hover p {
+    .card:hover section {
         display:inline;
         opacity: 1;
-    }
 
-    .card:hover a {
-        display: inline;
-        opacity: 1;
     }
 
     /*.selected p {
@@ -114,7 +104,7 @@
         -webkit-appearance: none;
         background: none;
         border: none;
-        background-color: #0EA5E9;
+        background-color: #1B9AB8;
         color: white;
         transition: transform 150ms ease-out;
     }

@@ -1,39 +1,29 @@
-# create-svelte
+# Adding and Removing Modules 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+You can add, remove and edit modules, including:
 
-## Creating a project
+- Module titles and descriptions
+- Background image
+- Module tasks
 
-If you're seeing this, you've probably already done this step. Congrats!
+within the module.JSON file. 
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+🚨 Currently there is a quick fix to get the correct module info to appear when you open the full module screen. Edit the titles in the "if" statement in the [mod] and [activity] +page.svelte files with the corresponding title in the JSON and the position in the array. This will be updated in the future so this is updated automatically.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Editing the Mission
 
-## Developing
+Currently this needs to be done in the root +page.svelte file. This hasn't been added to the JSON to date, but will be in future updates. 
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Known Bugs
 
-```bash
-npm run dev
+1. When a user refreshed on an activity page (e.g. the page with the embedded activity iframe, like the rise modules), the embedded iframe returns a 404. - FIXED
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Future updates
 
-## Building
+1. Breadcrumbs added to the top nav
+2. A profile dropdown that includes a calendar, what's coming up and a link to user profile settings
+3. Improved animations 
+4. A carousel that activates when there are > 3 modules on the dashboard. 
+5. Caching of data to improve load times
+6. Loaders so a user knows something is happening when waiting for iFrames to load
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-# OLv3testing

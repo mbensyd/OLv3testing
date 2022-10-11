@@ -4,7 +4,7 @@
     import { dets } from '../../store.js';
     import { actLink } from '../../store.js';
 
-    //breadcrumb
+    //breadcrumb update
     import { BreadCrumbs } from '../../store.js';
     $BreadCrumbs = {
     Dashboard: `/dashboard${$dets.newUrl}`,
@@ -17,15 +17,14 @@
     let pageMod = '';
 
     // TODO - refactoring so it is fully dynamic
-    if (pageID === 'Module 1: Path to Net Zero') {
-        //console.log("mod0");
-        pageMod = modules[0];
-    } else if (pageID === 'Module 2: Environmental Management Systems') {
-        //console.log("mod1");
-        pageMod = modules[1];
-    } else {
-        pageMod = modules[2];
-    };
+    var indexMod = modules.findIndex(function(post, index) {
+        if(post.Title === pageID)
+            return true;
+        });
+    console.log(indexMod);
+
+    pageMod = modules[indexMod];
+    console.log(pageMod);
 
     //add xAPI to activities TODO: do this on next route using url data - prevents refresh/clear cache bug and losing this. 
     let xapiTag = $page.url.search;
@@ -55,7 +54,7 @@
                 <li class="flex items-center p-3 bg-opacity-70 text-base font-bold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                     <input bind:checked={item.status} type="checkbox" class="mx-3 w-4 h-4">
                     <span class:checked={item.status} class="flex-1 ml-3 whitespace-nowrap">{item.text}</span>
-                    <a data-sveltekit-prefetch href="/dashboard/{pageMod.Title}/{item.text}{$dets.newUrl}" on:click="{() => actLink.set(`${item.link}+${addUrl}`)}" on:click="{console.log($actLink)}" class="test mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60">START</a>
+                    <a data-sveltekit-prefetch href="/dashboard/{pageMod.Title}/{item.text}{$dets.newUrl}" on:click="{() => $actLink=(`${item.link}+${addUrl}`)}" class="test mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60">START</a>
                 </li>
                 {/each}
             </ol>
