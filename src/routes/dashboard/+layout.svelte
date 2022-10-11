@@ -14,6 +14,7 @@
 
         <Breadcrumbs />     
     </div>
+    
 
     <div class="w-full md:flex md:w-auto md:order-9" id="navbar-sticky">
       <ul class="flex flex-col p-4 mt-4 md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -42,8 +43,12 @@
             </button> 
         </li>
     </ul>
+    
 </footer>
 
+
+
+  
 
 <style>
     button {

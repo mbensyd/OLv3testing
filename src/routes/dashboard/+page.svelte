@@ -65,7 +65,7 @@
 
     .card:hover {
         transition: all 350ms cubic-bezier(0.175, 0.685, 0.2, 1.275);
-        filter: grayscale(60%) !important;
+        filter: grayscale(50%) !important;
         cursor: pointer;
         transition-duration: 500ms;
         transform: scale(1.025);
@@ -74,21 +74,20 @@
     /*button appearing*/
     .card section { 
         opacity: 0;
-        transition-property: opacity;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 400ms;
-        transition-delay: 150ms;
+      
+        transition: all 0.35s 0.1s ease-out 0.5s;
     }
 
     .card.active section {
         display:inline;
         opacity: 1;
+        transition: all 0.35s 0.1s ease-out 0.5s;
     }
 
     .card.active {
         filter: none !important;
         cursor:auto;
-        flex-grow: 2.3;
+        flex-grow: 2.1;
 
     }
 
