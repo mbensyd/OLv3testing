@@ -53,7 +53,7 @@
                 <li class="flex items-center p-3 bg-opacity-70 text-base font-bold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
                     <input bind:checked={item.status} type="checkbox" class="mx-3 w-4 h-4">
                     <span class:checked={item.status} class="flex-1 ml-3 whitespace-nowrap">{item.text}</span>
-                    <a data-sveltekit-prefetch href="/dashboard/{pageMod.Title}/{item.text}{$dets.newUrl}" on:click="{() => $actLink=(`${item.link}+${addUrl}`)}" class="test mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-sky-500 border hover:text-sky-500 hover:font-normal hover:border border-sky-500 hover:bg-white hover:bg-opacity-60">START</a>
+                    <a data-sveltekit-prefetch href="/dashboard/{pageMod.Title}/{item.text}{$dets.newUrl}" on:click="{() => $actLink=(`${item.link}+${addUrl}`)}" class="test mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-cyan-600 border hover:text-cyan-600 hover:font-normal hover:border border-cyan-600 hover:bg-white hover:bg-opacity-60">START</a>
                 </li>
                 {/each}
             </ol>
@@ -70,7 +70,7 @@ a {
   -webkit-appearance: none;
   background: none;
   border: none;
-  background-color: #0EA5E9;
+  background-color: #1B9AB8;
   color: white;
   transition: transform 150ms ease-out;
 }
@@ -80,4 +80,15 @@ a:hover {
 a:active {
   transform: scale(0.9);
 }
+
+li {
+  -webkit-appearance: none;
+  transition: transform 150ms ease-out;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+
 </style>
