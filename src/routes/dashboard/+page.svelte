@@ -8,7 +8,7 @@
     //breadcrumb
     import { BreadCrumbs } from '../store.js';
     $BreadCrumbs = {
-    Dashboard: `#`
+    
     };
 
     //cat
@@ -44,7 +44,7 @@
     <div class="{clicked === `${mod.Title}` ? '' : 'closed'} card basis-0 grow h-screen bg-cover hover:grow-[1.5] {show === `${mod.Title}` ? 'active' : ''}  {current === `${mod.Title}` ? 'selected' : ''}" 
     on:mouseenter="{() => current = `${mod.Title}`}" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('{mod.image}{name}')">
         <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
-            <h1 class="text-3xl font-semibold pt-12 text-white">{mod.Title}</h1>
+            <h1 class="text-left text-3xl font-semibold pt-12 text-white">{mod.Title}</h1>
             <section class="card-text">
                 <p class="content pt-8 text-white">{mod.Description}</p>
                 <a data-sveltekit-prefetch href="/dashboard/{mod.Title}{$dets.newUrl}" class=" test mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-teal-500 border hover:text-teal-500 hover:font-bold hover:border border-teal-500 hover:bg-white hover:bg-opacity-60" 
@@ -59,7 +59,7 @@
 <style>
     /*card hover animation*/
     .card:hover {
-        transition: all 400ms cubic-bezier(0.175, 0.685, 0.2, 1.275);
+        transition: all 350ms cubic-bezier(0.175, 0.685, 0.2, 1.275);
     }
 
     /*button appearing*/

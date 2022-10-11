@@ -7,7 +7,6 @@
     //breadcrumb update
     import { BreadCrumbs } from '../../store.js';
     $BreadCrumbs = {
-    Dashboard: `/dashboard${$dets.newUrl}`,
     [$page.params.mod]: `#`
     };
 
