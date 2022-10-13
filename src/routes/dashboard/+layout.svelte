@@ -3,6 +3,7 @@
     let name = $dets.userName;
     import Breadcrumbs from './Breadcrumbs.svelte';
 
+
 </script>
 
 
@@ -14,7 +15,7 @@
 
         <Breadcrumbs />     
     </div>
-    
+     
 
     <div class="w-full md:flex md:w-auto md:order-9" id="navbar-sticky">
       <ul class="flex flex-col p-4 mt-4 md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -25,11 +26,14 @@
         </li>
       </ul>
     </div>
+
     </div>
   </div>
   </nav>
+  
 
-<slot />
+
+  <slot />
 
 
    <!-- footer -->
@@ -38,9 +42,9 @@
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
-            <button data-sveltekit-prefetch href="/dashboard" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-cyan-600 border hover:text-cyan-600 hover:font-bold hover:border border-cyan-600 hover:bg-white hover:bg-opacity-60" >
+            <a data-sveltekit-prefetch href="/dashboard/aboutUs" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-cyan-600 border hover:text-cyan-600 hover:font-bold hover:border border-cyan-600 hover:bg-white hover:bg-opacity-60" >
                 DISCOVER MORE
-            </button> 
+            </a> 
         </li>
     </ul>
     
@@ -50,7 +54,7 @@
 
   
 
-<style>
+<!--<style>
     button {
         -webkit-appearance: none;
         background: none;
@@ -65,7 +69,7 @@
     button:active {
         transform: scale(0.9);
     }
-</style>
+</style>-->
 
 
   
