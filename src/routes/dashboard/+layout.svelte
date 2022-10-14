@@ -2,7 +2,17 @@
     import { dets } from '../store.js';
     let name = $dets.userName;
     import Breadcrumbs from './Breadcrumbs.svelte';
+    import { Avatar, Dropdown, DropdownHeader, DropdownItem, DropdownDivider, Tooltip } from "flowbite-svelte"
 
+    //app drawer
+    import { Drawer, Button, CloseButton } from 'flowbite-svelte';
+    import { sineIn } from 'svelte/easing';
+    let hidden6 = true;
+    let transitionParamsRight = {
+          x: 320,
+          duration: 200,
+          easing: sineIn
+        };
 
 </script>
 
@@ -21,8 +31,9 @@
       <ul class="flex flex-col p-4 mt-4 md:flex-row md:mt-0 md:text-sm md:font-medium md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
         <li>
           <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
-            <span class="font-medium text-gray-600 dark:text-gray-300">MB</span>
+            <button class="font-medium text-gray-600 dark:text-gray-300" on:click={() => (hidden6 = false)}>MB</button>
           </div>
+            <Avatar id="user-drop" src="/images/profile-picture-3.webp" dot={{color:'bg-green-400'}} />
         </li>
       </ul>
     </div>
@@ -30,7 +41,35 @@
     </div>
   </div>
   </nav>
-  
+
+  <Dropdown triggeredBy="#user-drop">
+    <DropdownHeader>
+      <span class="block text-sm"> Bonnie Green </span>
+      <span class="block truncate text-sm font-medium"> name@flowbite.com </span>
+    </DropdownHeader>
+    <DropdownItem>Dashboard</DropdownItem>
+    <DropdownItem>Settings</DropdownItem>
+    <DropdownItem>Earnings</DropdownItem>
+    <DropdownDivider />
+    <DropdownItem>Sign out</DropdownItem>
+  </Dropdown>
+
+  <Drawer rightOffset="top-0 h-screen right-0" placement='right' transitionType="fly" transitionParams={transitionParamsRight} bind:hidden={hidden6} id='sidebar6'>
+    <div class='flex items-center z-50'>
+      <h5
+        id="drawer-label"
+        class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400">
+        <h3>Hi {name}</h3>
+      </h5>
+      <CloseButton on:click={() => (hidden6 = true)} class='mb-4 dark:text-white'/>
+        </div>
+      <p class="mb-6 text-sm text-gray-500 dark:text-gray-400">
+
+      </p>
+      <div class="grid grid-cols-2 gap-4">
+        <Button color="light" target="_blank" rel="noopener noreferrer" href="https://westernsydneyux.slack.com/archives/CAK3PBKQT">SLACK</Button>
+      </div>
+    </Drawer>
 
 
   <slot />

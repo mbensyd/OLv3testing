@@ -15,13 +15,14 @@
     let pageID = $page.params.mod;
     let pageMod = '';
 
-    // TODO - refactoring so it is fully dynamic
+    // return index for the module loaded on the page
     var indexMod = modules.findIndex(function(post, index) {
         if(post.Title === pageID)
             return true;
         });
     console.log(indexMod);
 
+    // get properties from the module loaded on current page
     pageMod = modules[indexMod];
     console.log(pageMod);
 
