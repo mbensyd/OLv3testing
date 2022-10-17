@@ -29,6 +29,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"flowbite": "^1.5.3"
+		"@supabase/supabase-js": "^2.0.0",
+		"flowbite": "^1.5.3",
+		"supabase": "^1.8.2"
 	}
 }

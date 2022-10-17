@@ -4,6 +4,7 @@
     import { page } from '$app/stores';
     import { modules } from "$lib/data/module.json";
     console.log($dets.newUrl);
+    console.log(modules);
 
     //breadcrumb
     import { BreadCrumbs } from '../store.js';

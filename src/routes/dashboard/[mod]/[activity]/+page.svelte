@@ -3,7 +3,14 @@
     import { page } from '$app/stores';
     import { dets } from '../../../store.js';
     import { actLink } from '../../../store.js';
+    import { moduleData } from '../../../store.js';
     console.log(modules);
+
+
+    //store of module data
+    let moduleDataLoad = $moduleData.modules;
+
+    console.log(moduleDataLoad);
 
     //add xAPI to activities TODO: do this on next route using url data - prevents refresh/clear cache bug and losing this. 
     let xapiTag = $page.url.search;

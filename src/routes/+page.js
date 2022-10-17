@@ -1,4 +1,6 @@
 import { dets } from './store.js';
+//import { moduleData } from './store.js';
+//moduleData.set('cat');
 
 export async function load ({params, url}) {
     let actor = url.searchParams.get('actor');
