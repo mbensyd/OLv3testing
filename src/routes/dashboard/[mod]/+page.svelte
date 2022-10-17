@@ -1,9 +1,10 @@
 <script>
     import { modules } from "$lib/data/module.json";
     import { page } from '$app/stores';
-    import { dets } from '../../store.js';
+    import { dets } from '../../store.js';    
     import { actLink } from '../../store.js';
-    import { toggleActivityComplete } from "../../store.js";
+    import { moduleData } from '../../store.js';
+    $moduleData = {modules};
 
     //breadcrumb update
     import { BreadCrumbs } from '../../store.js';
@@ -24,7 +25,7 @@
     console.log(indexMod);
 
     // get properties from the module loaded on current page
-    pageMod = modules[indexMod];
+    pageMod = $moduleData.modules[indexMod];
     console.log(pageMod);
 
     //add xAPI to activities TODO: do this on next route using url data - prevents refresh/clear cache bug and losing this. 
@@ -34,6 +35,9 @@
     //console.log(indexUrl);
     let addUrl = xapiTag.substring(indexUrl);
     //console.log(addUrl);
+
+    //new store
+    import { toggleActivityComplete } from '../../store.js';
 
 </script>
 
@@ -53,7 +57,7 @@
             <ol class="my-2 space-y-3">
                 {#each pageMod.toDoList as item}
                 <li class="flex items-center p-3 bg-opacity-70 text-base font-bold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white">
-                    <input bind:checked={item.status} type="checkbox" class="mx-3 w-4 h-4">
+                    <input bind:checked={item.status} on:change={console.log(pageMod)} type="checkbox" class="mx-3 w-4 h-4">
                     <span class:checked={item.status} class="flex-1 ml-3 whitespace-nowrap">{item.text}</span>
                     <a data-sveltekit-prefetch href="/dashboard/{pageMod.Title}/{item.text}{$dets.newUrl}" on:click="{() => $actLink=(`${item.link}+${addUrl}`)}" class="test mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-cyan-600 border hover:text-cyan-600 hover:font-normal hover:border border-cyan-600 hover:bg-white hover:bg-opacity-60">START</a>
                 </li>

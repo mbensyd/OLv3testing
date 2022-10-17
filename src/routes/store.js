@@ -8,19 +8,19 @@ export const BreadCrumbs = writable({});
 
 export const moduleData = writable({});
 
-export const toggleActivityComplete = (title) => {
-    activityList.update(activityList => {
+export const toggleActivityComplete = (text) => {
+    toDoList.update(toDoList => {
         let index = -1;
-        for(let i = 0; i < activityList.length; i++){
-            if(activityList[i].title === title ) {
+        for(let i = 0; i < toDoList.length; i++){
+            if(toDoList[i].text === text ) {
                 index = i;
                 break;
             }
         }
-        if(index = -1) {
-            activityList[index].completed = !activityList[index].completed;
+        if(index != -1) {
+            toDoList[index].status = !toDoList[index].status;
         }
-        return activityList;
+        return toDoList;
     }
         ) 
 }
