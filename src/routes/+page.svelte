@@ -2,9 +2,11 @@
 
 	import Layout from "./+layout.svelte";
     import bgspace from '$lib/images/bgspace.png';
+
     //importing det store with url details - different way to get url data. Don't know which one is better. 
     import { dets } from './store.js';
     console.log($dets);
+    
     //import { modules } from "$lib/data/module.json";
     //console.log(modules);
 
