@@ -5,11 +5,15 @@
     //importing det store with url details - different way to get url data. Don't know which one is better. 
     import { dets } from './store.js';
     console.log($dets);
+    import { modules } from "$lib/data/module.json";
+    console.log(modules);
 
 
-    //getting url for button to start to add xAPI data to next link. Very dodgy. 
-    var newUrl = $dets.newUrl;
-    console.log(newUrl);
+    import { moduleData } from './store.js';
+    $moduleData = {modules};
+
+    console.log($moduleData);
+    
 
 </script>
 

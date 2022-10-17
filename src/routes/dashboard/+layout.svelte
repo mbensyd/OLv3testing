@@ -76,13 +76,14 @@
 
 
    <!-- footer -->
-<footer class="fixed bottom-0 left-0 z-20 p-4 w-full bg-white border-t bg-opacity-100 border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 PGx™
+<footer class="fixed bottom-0 left-0 z-20 p-10 w-full bg-white border-t bg-opacity-100 border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+    <span class="text-sm text-gray-500 w-3/4 dark:text-gray-400">PGx aims to deliver a differentiated learning experience by providing flexible, relevant and sustainable career development programmes that are underpinned by active, innovative partnerships and applied research.
+      <br><br>© 2022 PGx™
     </span>
     <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
         <li>
             <a data-sveltekit-prefetch href="/dashboard/aboutUs" class="mt-1 py-2 px-5 text-sm font-normal text-center rounded-full shadow-xl text-white bg-cyan-600 border hover:text-cyan-600 hover:font-bold hover:border border-cyan-600 hover:bg-white hover:bg-opacity-60" >
-                DISCOVER MORE
+                ABOUT PGx
             </a> 
         </li>
     </ul>

@@ -3,6 +3,7 @@
     import { page } from '$app/stores';
     import { dets } from '../../store.js';
     import { actLink } from '../../store.js';
+    import { toggleActivityComplete } from "../../store.js";
 
     //breadcrumb update
     import { BreadCrumbs } from '../../store.js';
