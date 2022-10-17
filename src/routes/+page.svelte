@@ -5,16 +5,16 @@
     //importing det store with url details - different way to get url data. Don't know which one is better. 
     import { dets } from './store.js';
     console.log($dets);
-    import { modules } from "$lib/data/module.json";
+    //import { modules } from "$lib/data/module.json";
     //console.log(modules);
 
 
-    import { moduleData } from './store.js';
-    $moduleData = {modules};
+    //import { moduleData } from './store.js';
+    //$moduleData = {modules};
 
-    let moduleDataLoad = $moduleData.modules;
+    //let moduleDataLoad = $moduleData.modules;
 
-    console.log(moduleDataLoad);
+    //console.log(moduleDataLoad);
     
 
 </script>
