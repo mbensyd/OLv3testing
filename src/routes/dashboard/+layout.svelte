@@ -33,7 +33,6 @@
           <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
             <button class="font-medium text-gray-600 dark:text-gray-300" on:click={() => (hidden6 = false)}>MB</button>
           </div>
-            <Avatar id="user-drop" src="/images/profile-picture-3.webp" dot={{color:'bg-green-400'}} />
         </li>
       </ul>
     </div>
@@ -41,18 +40,6 @@
     </div>
   </div>
   </nav>
-
-  <Dropdown triggeredBy="#user-drop">
-    <DropdownHeader>
-      <span class="block text-sm"> Bonnie Green </span>
-      <span class="block truncate text-sm font-medium"> name@flowbite.com </span>
-    </DropdownHeader>
-    <DropdownItem>Dashboard</DropdownItem>
-    <DropdownItem>Settings</DropdownItem>
-    <DropdownItem>Earnings</DropdownItem>
-    <DropdownDivider />
-    <DropdownItem>Sign out</DropdownItem>
-  </Dropdown>
 
   <Drawer rightOffset="top-0 h-screen right-0" placement='right' transitionType="fly" transitionParams={transitionParamsRight} bind:hidden={hidden6} id='sidebar6'>
     <div class='flex items-center z-50'>
