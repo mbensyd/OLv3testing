@@ -2,21 +2,42 @@
 
 	import Layout from "./+layout.svelte";
     import bgspace from '$lib/images/bgspace.png';
+    import { supabase } from './supabase.js';
 
-    //importing det store with url details - different way to get url data. Don't know which one is better. 
+    //importing det store with url details 
     import { dets } from './store.js';
-    console.log($dets);
-    
-    //import { modules } from "$lib/data/module.json";
+    //console.log($dets);
+
+    import { modules } from "$lib/data/module.json";
     //console.log(modules);
 
 
-    //import { moduleData } from './store.js';
-    //$moduleData = {modules};
+    import { moduleData } from './store.js';
+    $moduleData = {modules};
 
-    //let moduleDataLoad = $moduleData.modules;
+    // testing supabase out, just in case we need to use it
+    /*
+    
+    let toDoListT = $moduleData.modules[0].toDoList[0];
+    console.log(toDoListT.text);
 
-    //console.log(moduleDataLoad);
+    const getList = async() => {{
+        const { data, error } = await supabase.from('ActivityList1').select();
+        var item1 = data;
+        console.log(item1);
+        var indexItem = item1.indexOf(`${toDoListT.text}`);
+        console.log(indexItem);
+    }
+        if(item1.text === toDoListT.text) {
+            console.log('already there')
+        } else {
+        const { data, error } = await supabase.from('ActivityList1').insert([
+            { 'text': toDoListT.text,
+            'completed': toDoListT.status,
+            'link': toDoListT.link}
+            ])}
+    };*/
+
     
 
 </script>

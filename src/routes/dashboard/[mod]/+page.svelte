@@ -36,9 +36,6 @@
     let addUrl = xapiTag.substring(indexUrl);
     //console.log(addUrl);
 
-    //new store
-    import { toggleActivityComplete } from '../../store.js';
-
 </script>
 
 

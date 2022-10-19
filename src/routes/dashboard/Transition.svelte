@@ -5,7 +5,7 @@
 
 </script>
 
-//TODO: For setting up smoother page transitions 
+//TODO: For setting up smoother page transitions - later
 
 {#key url}
     <div 

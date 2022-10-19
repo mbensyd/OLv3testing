@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store';
+import { supabase } from './supabase.js';
 
 export const dets =  writable ('');
 
@@ -8,20 +9,14 @@ export const BreadCrumbs = writable({});
 
 export const moduleData = writable({});
 
-export const toggleActivityComplete = (text) => {
-    toDoList.update(toDoList => {
-        let index = -1;
-        for(let i = 0; i < toDoList.length; i++){
-            if(toDoList[i].text === text ) {
-                index = i;
-                break;
-            }
-        }
-        if(index != -1) {
-            toDoList[index].status = !toDoList[index].status;
-        }
-        return toDoList;
-    }
-        ) 
-}
+// for todolist from supabase, testing, jsut in case we need to do this.
+/*
+export const loadToDos = async () => {
+    const {data, error } = await supabase.from('ActivityList1').select()
 
+    if(error) {
+        return console.error(error)
+    }
+    todos.set(data);
+}
+*/
