@@ -27,3 +27,4 @@ Currently this needs to be done in the root +page.svelte file. This hasn't been 
 5. Caching of data to improve load times
 6. Loaders so a user knows something is happening when waiting for iFrames to load
 
+# experimentLSrender
