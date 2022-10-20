@@ -1,30 +1,15 @@
-//import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-netlify';
-
+import adapter from '@sveltejs/adapter-static';
 
 export default {
   kit: {
-    // default options are shown
     adapter: adapter({
-      // if true, will create a Netlify Edge Function rather
-      // than using standard Node-based functions
-      edge: false,
-
-      // if true, will split your app into multiple functions
-      // instead of creating a single one for the entire app.
-      // if `edge` is true, this option cannot be used
-      split: false
+      // default options are shown. On some platforms
+      // these options are set automatically — see below
+      pages: 'build',
+      assets: 'build',
+      fallback: '200.html',
+      precompress: false,
+      strict: true,
     })
-  },
-  vitePlugin: {
-    experimental: {
-      useVitePreprocess: true
-    }
-  },
-  //preprocess: [
-	//preprocess({
-//		postcss: true
-//	})
-//]
+  }
 };
-

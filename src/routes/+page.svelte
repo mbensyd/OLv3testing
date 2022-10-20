@@ -1,8 +1,7 @@
 <script>
-
+ 
 	import Layout from "./+layout.svelte";
     import bgspace from '$lib/images/bgspace.png';
-    import { supabase } from './supabase.js';
 
     //importing det store with url details 
     import { dets } from './store.js';

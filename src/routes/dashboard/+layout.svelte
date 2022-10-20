@@ -20,7 +20,7 @@
 <nav class="py-0 fixed w-full z-20 top-0 left-0 backdrop-blur-sm">
   <div class="bg-white bg-opacity-40 w-full flex flex-wrap justify-between">
     <div  class="flex items-center">
-        <img src="https://img.icons8.com/sf-regular/64/990033/mac-os.png" class="mr-12 h-12 ml-10 sm:h-8" alt="Logo">
+        <img src="https://img.icons8.com/color/48/000000/cat--v2.png" class="mr-12 h-12 ml-10 sm:h-8" alt="Logo">
         <Breadcrumbs />     
     </div>
      
@@ -37,7 +37,7 @@
   </div>
   </nav>
 
-  <Drawer rightOffset="top-0 h-screen right-0" placement='right' transitionType="fly" transitionParams={transitionParamsRight} bind:hidden={hidden} id='sidebar6'>
+  <Drawer rightOffset="top-0 h-screen right-0" placement='right' transitionType="fly" transitionParams={transitionParamsRight} bind:hidden={hidden} id='sidebar'>
     <div class='flex items-center z-50'>
       <h5
         id="drawer-label"

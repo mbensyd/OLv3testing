@@ -1,7 +1,7 @@
 
   { "modules": [
     {
-        "Title": "Module 1: Path to Net Zero 🌱",
+        "Title": "Module 1: Path to Net Zero 🤣",
         "Description": "Find out companies can reach net zero and research the basic concepts of green supply chains and environmental management systems.",
         "image": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80",
         "toDoList": [{"text": "Task 1: Rise Test", "status": false, "link": "https://media.openlearning.com/NLdnqLay7fgVSFY8j8dbuTaVy5SntPfn9dHEqqTYfQAvyS99BTkdTH6d4WcjKsFY.1664518486/demo-xapi-44M0T6Hc/index.html?activity_id=https%3A%2F%2Fwww.openlearning.com%2Fcourses%2Fanother-experiment%2Ftemp%2F%3Fblock%3D6336895226a58ba166fa72d9%26" },
@@ -25,8 +25,8 @@
                   {"text": "Portfolio 1: Google Docs Test", "status": false, "link": "https://player.hubro.education/game/exercise"}]
   },
   {
-    "Title": "Module 4: Calculating your Carbon Footprint 🐾",
-    "Description": "Complete a life cycle assessment for a product or process to determine its environmental impacts, and identify areas to improve sustainability.",
+    "Title": "Project: Creating your EMS 🙇",
+    "Description": "Follow the process to create your own EMS, applying the skills and knowledge you have so diligently obtained.",
     "image": "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     "toDoList": [{"text": "Task 1: Rise Test", "status": false, "link": "https://media.openlearning.com/NLdnqLay7fgVSFY8j8dbuTaVy5SntPfn9dHEqqTYfQAvyS99BTkdTH6d4WcjKsFY.1664518486/demo-xapi-44M0T6Hc/index.html?activity_id=https%3A%2F%2Fwww.openlearning.com%2Fcourses%2Fanother-experiment%2Ftemp%2F%3Fblock%3D6336895226a58ba166fa72d9%26" },
                 {"text": "Task 2: CenarioVR Test.", "status": false, "link": "https://cenariovr.com/app/#/view/i0q?zfile=live.zip&id=23354"},

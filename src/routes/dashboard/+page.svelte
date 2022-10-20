@@ -21,25 +21,31 @@
 
     //setting up dynamic css
     let show = false;
+    let hidden;
+
+    //let showcard = () => { shown = !shown };
+    let shown
 
 </script>
 
-<div class="flex flex-row">
+<main class="flex flex-row">
     {#each modules as mod}
-    <div class="card basis-0 grow h-screen bg-cover {show === `${mod.Title}` ? 'active' : ''}" 
-    on:click="{() => show = `${mod.Title}`}" style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('{mod.image}{name}'); filter: grayscale(80%)">
-        <div class="object-center mx-[10%] mt-28 flex flex-col justify-center items-center">
+    <button class="card basis-0 grow h-screen bg-cover {show === `${mod.Title}` ? 'active' : ''}" 
+    on:click="{() => show = `${mod.Title}`}" on:click={() => shown = `${mod.Title}`} style="background-image: linear-gradient(1deg, rgb(0 0 0 / 0%), rgb(0 0 0 / 40%)), url('{mod.image}'); filter: grayscale(80%)">
+        <div class="mx-[10%] flex flex-col items-center">
             <h1 class="text-left text-3xl font-semibold pt-12 text-white">{mod.Title}</h1>
+            {#if shown === `${mod.Title}`}
             <section class="card-text">
                 <p class="content pt-8 text-white">{mod.Description}</p>
                 <a data-sveltekit-prefetch href="/dashboard/{mod.Title}{$dets.newUrl}" class=" test mt-8 inline-flex py-2 px-7 text-l font-medium text-center rounded-full shadow-xl text-white bg-teal-500 border hover:text-teal-500 hover:font-bold hover:border border-teal-500 hover:bg-white hover:bg-opacity-60" 
                 >
                 LET'S GO </a>
             </section>
+            {/if}
         </div>
-    </div>
+    </button>
     {/each}
-</div>
+</main>
 
 <style>
     /*card hover animation*/
@@ -57,9 +63,10 @@
     }
 
     /*button appearing*/
+
+    /*
     .card section { 
-        opacity: 0;
-      
+        display: none;
         transition: all 0.35s 0.1s ease-out 0.5s;
     }
 
@@ -68,12 +75,11 @@
         opacity: 1;
         transition: all 0.35s 0.1s ease-out 0.5s;
     }
-
+*/
     .card.active {
         filter: none !important;
         cursor:auto;
         flex-grow: 2.1;
-
     }
 
 
@@ -81,9 +87,9 @@
         transform:none;
     }
 
-    .hidden {
+    /*.hidden {
         display: none;
-    }
+    }*/
 
     
     a {
@@ -94,9 +100,11 @@
         color: white;
         transition: transform 150ms ease-out;
     }
+
     a:hover {
         transform: scale(1.1);
     }
+
     a:active {
         transform: scale(0.9);
     }

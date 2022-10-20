@@ -1,7 +1,6 @@
 <script>
 	import '../app.postcss';
-	import {supabase} from './supabase.js'
-	console.log(supabase);
+	export const prerender = true
 </script>
 
 <slot />
